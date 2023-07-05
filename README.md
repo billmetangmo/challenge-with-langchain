@@ -23,3 +23,5 @@ user    0m1.820s
 sys     0m0.302s
 
 
+sql2csv --db "sqlite:///LoiLibreQA/faiss_document_store.db" --query "SELECT * FROM document" > documents.csv
+Temps pour loader les 46495 documents = 21 minutes [95% - 44544 ]

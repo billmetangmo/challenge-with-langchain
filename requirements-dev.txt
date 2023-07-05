@@ -1,0 +1,2 @@
+csvkit==1.1.1
+datasette==0.64.3
