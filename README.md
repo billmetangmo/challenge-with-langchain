@@ -29,7 +29,9 @@ Temps pour loader les 46495 documents = 21 minutes [95% - 44544 ]
 It takes 29s-59s to answer to my question about urgency with chain_type=stuff and k=1
 
 
-
+streamlit run ui-streamlit.py
+chainlit run ui-chainlit.py --port 8502
+python3 app.py (gradio)
 
 ## Resources
 https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/05-langchain-retrieval-augmentation.ipynb
