@@ -44,13 +44,14 @@ doc_store = Qdrant(
 )
 
 # prompt template is 107/512 tokens https://platform.openai.com/tokenizer 
-llm = ChatOpenAI(openai_api_base="http://3.70.244.22:8111/v1", max_tokens=128,temperature=0)
+llm = ChatOpenAI(openai_api_base="http://3.70.244.22:8111/v1", max_tokens=200,temperature=0)
 chain_type_kwargs = {"prompt": CHAT_PROMPT}
 qa = RetrievalQA.from_chain_type(
     llm=llm,
     chain_type="stuff",
     retriever=doc_store.as_retriever(search_kwargs={"k": 1}),
-    chain_type_kwargs=chain_type_kwargs
+    chain_type_kwargs=chain_type_kwargs,
+    return_source_documents=True
 )
 
 query = "Quelles sont les démarches à suivre pour créer une entreprise et quels sont les risques et les responsabilités juridiques associés ? "
