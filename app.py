@@ -58,4 +58,4 @@ def get_answer(query):
     return result
 
 iface = gr.Interface(fn=get_answer, inputs="text", outputs="text")
-iface.launch()
+iface.launch(port=8503)
