@@ -13,10 +13,10 @@ logging.getLogger().setLevel(logging.DEBUG)
 """
 
 os.environ["OPENAI_API_KEY"] = "random-string"
-qdrant_url="http://3.124.184.48:6333"
+qdrant_url="http://3.70.244.22:6333"
 
 
-embeddings = OpenAIEmbeddings(openai_api_base="http://3.124.184.48:8444/v1")
+embeddings = OpenAIEmbeddings(openai_api_base="http://3.70.244.22:8444/v1")
 #text = "Prem is an easy to use open source AI platform."
 #query_result = embeddings.embed_query(text)
 #doc_result = embeddings.embed_documents(data)
@@ -27,10 +27,13 @@ doc_store = Qdrant(
     embeddings=embeddings,
 )
 
-llm = ChatOpenAI(openai_api_base="http://3.124.184.48:8111/v1", max_tokens=2048)
+llm = ChatOpenAI(openai_api_base="http://3.70.244.22:8111/v1", max_tokens=400)
 qa = RetrievalQA.from_chain_type(
     llm=llm,
     chain_type="stuff",
-    retriever=doc_store.as_retriever()
+    retriever=doc_store.as_retriever(search_kwargs={"k": 1})
 )
-qa.run("Que faire en cas d'urgence ?")
+
+query = "Que faire en cas d'urgence ?"
+result = qa({"query": query})
+ic(result)

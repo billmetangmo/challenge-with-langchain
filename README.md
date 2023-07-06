@@ -25,3 +25,10 @@ sys     0m0.302s
 
 sql2csv --db "sqlite:///LoiLibreQA/faiss_document_store.db" --query "SELECT * FROM document" > documents.csv
 Temps pour loader les 46495 documents = 21 minutes [95% - 44544 ]
+
+It takes 29s-59s to answer to my question about urgency with chain_type=stuff and k=1
+
+
+## Resources
+https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/05-langchain-retrieval-augmentation.ipynb
+https://qdrant.tech/articles/langchain-integration/
