@@ -38,3 +38,4 @@ https://qdrant.tech/articles/langchain-integration/
 https://github.com/hwchase17/langchain/issues/6982#issuecomment-1614905760 (prompt examples by qa)
 https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/01-langchain-prompt-templates.ipynb
 https://python.langchain.com/docs/modules/chains/popular/vector_db_qa
+https://python.langchain.com/docs/modules/chains/popular/vector_db_qa#return-source-documents

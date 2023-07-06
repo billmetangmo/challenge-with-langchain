@@ -1,5 +1,5 @@
 import os
-import streamlit as st
+import gradio as gr
 from langchain.embeddings import OpenAIEmbeddings
 from icecream import ic
 from langchain.vectorstores import Qdrant
@@ -52,7 +52,10 @@ qa = RetrievalQA.from_chain_type(
     return_source_documents=True
 )
 
-query = st.text_input('Enter your question:', 'Quelles sont les démarches à suivre pour créer une entreprise et quels sont les risques et les responsabilités juridiques associés ? ')
-if st.button('Submit'):
+def get_answer(query):
     result = qa({"query": query})
-    st.write(result)
+    ic(result)
+    return result
+
+iface = gr.Interface(fn=get_answer, inputs="text", outputs="text")
+iface.launch()
