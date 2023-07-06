@@ -54,5 +54,5 @@ qa = RetrievalQA.from_chain_type(
 
 query = st.text_input('Enter your question:', 'Quelles sont les démarches à suivre pour créer une entreprise et quels sont les risques et les responsabilités juridiques associés ? ')
 if st.button('Submit'):
-    result = "bib"
+    result = qa({"query": query})
     st.write(result)
