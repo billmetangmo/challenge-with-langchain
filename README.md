@@ -47,10 +47,10 @@ python3 ui/app.py
 Enjoy exploring the French legal corpus through our intuitive QA application!
 
 ## Resources
-https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/05-langchain-retrieval-augmentation.ipynb
-https://qdrant.tech/articles/langchain-integration/
+https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/05-langchain-retrieval-augmentation.ipynb  
+https://qdrant.tech/articles/langchain-integration/  
 
-https://github.com/hwchase17/langchain/issues/6982#issuecomment-1614905760 (prompt examples by qa)
-https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/01-langchain-prompt-templates.ipynb
-https://python.langchain.com/docs/modules/chains/popular/vector_db_qa
-https://python.langchain.com/docs/modules/chains/popular/vector_db_qa#return-source-documents
+https://github.com/hwchase17/langchain/issues/6982#issuecomment-1614905760 (prompt examples by qa)  
+https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/01-langchain-prompt-templates.ipynb  
+https://python.langchain.com/docs/modules/chains/popular/vector_db_qa  
+https://python.langchain.com/docs/modules/chains/popular/vector_db_qa#return-source-documents  
