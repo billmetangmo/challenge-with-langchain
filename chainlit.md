@@ -12,4 +12,5 @@ Hello there, User! 👋 We're thrilled to have you here. Our application is a ro
 
 - **Documentation:** Understand how to best use our application with our comprehensive [App Documentation](https://github.com/billmetangmo/challenge-with-langchain) 📚
 
+Please note that each question may take approximately 4 to 5 minutes to generate a response. We kindly ask for your patience during this time.
 Happy exploring! 💻😊
